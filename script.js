@@ -1,27 +1,9 @@
 
-function showContent(id) {
-  const sections = document.querySelectorAll('.content-section');
-  const viewer = document.querySelector('.mobile-viewer');
-  const title = document.querySelector('.mobile-viewer h1');
-  const contentContainer = document.querySelector('.viewer-content');
-
-  sections.forEach(s => s.style.display = 'none');
-  const selected = document.getElementById(id);
-  contentContainer.innerHTML = selected.innerHTML;
-  viewer.style.display = 'block';
-  document.querySelector('.container').style.display = 'none';
-}
-
-function goBack() {
-  document.querySelector('.mobile-viewer').style.display = 'none';
-  document.querySelector('.container').style.display = 'flex';
-}
-
 function getTodayPassword() {
   const now = new Date();
-  const mm = String(now.getMonth() + 1).padStart(2, '0');
-  const dd = String(now.getDate()).padStart(2, '0');
-  return (dd + mm).split('').reverse().join('') + "L11";
+  const mm = String(now.getMonth() + 1).padStart(2, '0'); // 確保月份兩位數
+  const dd = String(now.getDate()).padStart(2, '0'); // 確保日期兩位數
+  return (dd + mm).split('').reverse().join('') + "L11"; // 倒排並加上L11
 }
 
 function checkPassword() {
