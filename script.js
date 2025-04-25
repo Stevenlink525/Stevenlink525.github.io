@@ -1,10 +1,11 @@
 function getTodayPassword() {
   const now = new Date();
-  const mm = String(now.getMonth() + 1).padStart(2, '0'); // 確保月份是兩位數
-  const dd = String(now.getDate()).padStart(2, '0'); // 確保日期是兩位數
+  const mm = String(now.getMonth() + 1).padStart(2, '0');
+  const dd = String(now.getDate()).padStart(2, '0');
   const password = dd + mm;  // 組合日期和月份
   return password.split('').reverse().join('') + "L11"; // 倒排並加上 L11
 }
+
 
 function checkPassword() {
   const input = document.getElementById('passwordInput').value;
