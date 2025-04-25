@@ -8,6 +8,16 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+<div class="password-screen">
+  <div class="password-box">
+    <h2>🔐 請輸入今日密碼</h2>
+    <input type="password" id="passwordInput" placeholder="輸入密碼..." />
+    <button onclick="checkPassword()">進入產品說明書</button>
+    <p id="errorMsg"></p>
+  </div>
+</div>
+
   <header class="page-header">
     <h1>📦 產品說明書</h1>
   </header>
@@ -63,6 +73,13 @@
         </div>
       </section>
     </main>
+  </div>
+  <script src="script.js"></script>
+
+  <div class="mobile-viewer" style="display: none;">
+    <h1>📦 產品說明書</h1>
+    <div class="viewer-content"></div>
+    <button onclick="goBack()" class="back-btn">← 返回選單</button>
   </div>
   <script src="script.js"></script>
 </body>

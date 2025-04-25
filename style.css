@@ -136,3 +136,95 @@ h2 {
     margin: 10px 0;
   }
 }
+
+.sidebar li {
+  margin: 5px 10px;
+  border-radius: 8px;
+  background-color: #f1f0ed;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.mobile-viewer {
+  padding: 20px;
+  text-align: center;
+}
+
+.viewer-content {
+  margin-top: 20px;
+  text-align: left;
+  padding: 0 1em;
+  color: #4b463f;
+}
+
+.back-btn {
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #a98f78;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.password-screen {
+  position: fixed;
+  background: #fffdf8;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+.password-box {
+  text-align: center;
+  background: #f9f5f0;
+  border: 1px solid #ddd;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.password-box input {
+  padding: 10px;
+  margin: 10px;
+  font-size: 16px;
+  width: 200px;
+}
+
+.password-box button {
+  padding: 10px 20px;
+  background: #a98f78;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.password-box p {
+  color: red;
+  margin-top: 10px;
+}
+
+.img-overlay {
+  position: fixed;
+  background: rgba(0,0,0,0.8);
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.img-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border: 4px solid white;
+  border-radius: 12px;
+}
+
+/* 動畫 */
+.content-section, .mobile-viewer, .photo-gallery img {
+  transition: all 0.3s ease-in-out;
+}
