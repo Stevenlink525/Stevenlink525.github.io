@@ -1,9 +1,9 @@
-
 function getTodayPassword() {
   const now = new Date();
-  const mm = String(now.getMonth() + 1).padStart(2, '0'); // 確保月份兩位數
-  const dd = String(now.getDate()).padStart(2, '0'); // 確保日期兩位數
-  return (dd + mm).split('').reverse().join('') + "L11"; // 倒排並加上L11
+  const mm = String(now.getMonth() + 1).padStart(2, '0'); // 確保月份是兩位數
+  const dd = String(now.getDate()).padStart(2, '0'); // 確保日期是兩位數
+  const password = dd + mm;  // 組合日期和月份
+  return password.split('').reverse().join('') + "L11"; // 倒排並加上 L11
 }
 
 function checkPassword() {
@@ -17,7 +17,7 @@ function checkPassword() {
   }
 }
 
-// 圖片放大
+// 圖片放大功能
 document.addEventListener('click', function(e) {
   if (e.target.classList.contains('zoomable')) {
     const overlay = document.createElement('div');
